@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 import os
 
+import humps
 from doppler_env import load_dotenv
 from sqlalchemy import MetaData, create_engine
-from sqlalchemy.orm import DeclarativeBase
+from sqlalchemy.orm import DeclarativeBase, declared_attr
 
 load_dotenv()
 env = dict(os.environ)
@@ -13,6 +14,10 @@ class Model(DeclarativeBase):
     """
     Base for all ORM models.
     """
+
+    @declared_attr.directive
+    def __tablename__(cls) -> str:
+        return humps.decamelize(cls.__name__) + "s"
 
     metadata = MetaData(
         naming_convention={
