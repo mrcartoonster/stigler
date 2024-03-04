@@ -9,7 +9,7 @@ fail_fast: true
 
 minimum_pre_commit_version: '1.15.0'
 
-exclude: 'mirgrations'
+exclude: 'migrations'
 
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
