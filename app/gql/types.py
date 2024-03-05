@@ -3,6 +3,10 @@ from graphene import Float, Int, ObjectType, String
 
 
 class StiglerType(ObjectType):
+    class Meta:
+        description = "Stigler type!"
+        name = "Stigler"
+
     idx = Int()
     commodity = String()
     unit = String()
