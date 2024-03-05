@@ -68,6 +68,7 @@ pyhumps = "^3.8.0"
 
 [tool.poetry.group.dev.dependencies]
 ipython = "^8.22.2"
+yakutils = "^2.0.0"
 
 [build-system]
 requires = ["poetry-core"]

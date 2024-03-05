@@ -4,7 +4,7 @@ import os
 import humps
 from doppler_env import load_dotenv
 from sqlalchemy import MetaData, create_engine
-from sqlalchemy.orm import DeclarativeBase, declared_attr
+from sqlalchemy.orm import DeclarativeBase, declared_attr, sessionmaker
 
 load_dotenv()
 env = dict(os.environ)
@@ -31,3 +31,4 @@ class Model(DeclarativeBase):
 
 
 engine = create_engine(env["DB_URL"], echo=False)
+Session = sessionmaker(engine)

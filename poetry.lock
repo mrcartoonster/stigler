@@ -1859,7 +1859,18 @@ MarkupSafe = ">=2.1.1"
 [package.extras]
 watchdog = ["watchdog (>=2.3)"]
 
+[[package]]
+name = "yakutils"
+version = "2.0.0"
+description = "A really lazy package"
+optional = false
+python-versions = "*"
+files = [
+    {file = "yakutils-2.0.0-py3-none-any.whl", hash = "sha256:438783abc3191d2017df98af05faf816c06bcae3eb5f5224139c58d03c9e953e"},
+    {file = "yakutils-2.0.0.tar.gz", hash = "sha256:1a666fddd59e5243d86e6c4132587f1339e722c7624cbb7ac43ca26fdef00e41"},
+]
+
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "9f91643c864a50d297275fd1eaa824c82316f6ad60c40c0e9cf62bdc99bd2cfb"
+content-hash = "df7f372b9190fff4deb2f6e8b7b4b09b24e06faeac0c01a85a21ad05a18dfb29"
