@@ -3,11 +3,20 @@ import os
 
 import humps
 from doppler_env import load_dotenv
-from sqlalchemy import MetaData, create_engine
+from sqlalchemy import URL, MetaData, create_engine
 from sqlalchemy.orm import DeclarativeBase, declared_attr, sessionmaker
 
 load_dotenv()
 env = dict(os.environ)
+
+url_object = URL.create(
+    "postgresql+psycopg2",
+    username=env["DB_USER"],
+    password=env["DB_PASSWORD"],
+    host=env["DB_HOST"],
+    database=env["DB_NAME"],
+    port=int(env["PORT"]),
+)
 
 
 class Model(DeclarativeBase):
@@ -30,5 +39,5 @@ class Model(DeclarativeBase):
     )
 
 
-engine = create_engine(env["DB_URL"], echo=False)
+engine = create_engine(url_object, echo=False)
 Session = sessionmaker(engine)
