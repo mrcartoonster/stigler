@@ -9,7 +9,6 @@ from sqlalchemy.orm import DeclarativeBase, declared_attr, sessionmaker
 load_dotenv()
 env = dict(os.environ)
 
-host = 'postgres://stigler_user:BJtf2dQz3GvU3iUcC99PUi0njJBoBEQ0@dpg-cnmbargl6cac73fb6pn0-a.oregon-postgres.render.com/stigler'
 
 url_object = URL.create(
     "postgresql+psycopg2",
