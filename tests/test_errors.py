@@ -9,3 +9,10 @@ pytest.raises(graphql.GraphQLError)`
 Check Pytest chapter 2 Testing for Expected Exceptions
 
 """
+
+
+def test_simple():
+    """
+    Making a simple test for CI.
+    """
+    assert 1 == 1

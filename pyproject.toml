@@ -70,6 +70,10 @@ gunicorn = "^21.2.0"
 [tool.poetry.group.dev.dependencies]
 ipython = "^8.22.2"
 yakutils = "^2.0.0"
+pur = "^7.3.1"
+pip-audit = "^2.7.2"
+pytest = "^8.1.1"
+pytest-clarity = "^1.0.1"
 
 [tool.poetry-auto-export]
 output = "requirements.txt"
