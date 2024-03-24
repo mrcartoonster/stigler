@@ -2,9 +2,8 @@ name: Simple update scheduling
 
 
 on:
-  push:
-    branches:
-      - "action**"
+  schedule:
+    - cron: "0 1 * * 0"
 
 jobs:
   build:
