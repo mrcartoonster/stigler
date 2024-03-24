@@ -3,17 +3,18 @@ name: Simple update scheduling
 
 on:
   schedule:
-   - cron: "0 1 * * 0"
+    - cron: "0 1 * * 0"
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Set up Python 3.11
-      uses: actions/setup-python@v3
+      uses: actions/setup-python@v5
       with:
         python-version: "3.11"
+        cache: 'pip'
     - name: Pip audit action
       uses: pypa/gh-action-pip-audit@v1.0.8
       with:
